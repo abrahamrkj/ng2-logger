@@ -41,16 +41,16 @@ export class Log {
     private static display(name: string, data: any, incomming: Level, moduleName: string) {
         if (!contain(Log.levels, incomming)) return;
         if (incomming === Level.DATA) {
-            Display.msg(name, data, name, Log.instances[moduleName].color, Level.DATA);
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color, Level.DATA);
         }
         if (incomming === Level.ERROR) {
-            Display.msg(name, data, name, Log.instances[moduleName].color, Level.ERROR);
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color, Level.ERROR);
         }
         if (incomming === Level.INFO) {
-            Display.msg(name, data, name, Log.instances[moduleName].color, Level.INFO);
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color, Level.INFO);
         }
         if (incomming === Level.WARN) {
-            Display.msg(name, data, name, Log.instances[moduleName].color, Level.WARN);
+            Display.msg(name, data, moduleName, Log.instances[moduleName].color, Level.WARN);
         }
     }
 
